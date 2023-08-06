@@ -1,11 +1,11 @@
 import React from "react";
+import { ResumeForm } from "~/components/ResumeForm";
 
-export default function NewPage(){
-    //code here
 
+export default function New(){
     return(
-        <div>
-            <h1 className="w-full">wuzzup</h1>
-        </div>
+        <main className="w-full">
+            <ResumeForm />
+        </main>
     )
 }

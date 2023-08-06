@@ -18,10 +18,10 @@ export default function RootLayout({
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </head>
         <body>
-            <Navbar />
-            <main className='w-full mx-auto'>
-                {children}
-            </main>
+        <div className="flex items-center flex-col p-8 space-y-10 min-h-screen">
+          <Navbar />
+          <main>{children}</main>
+        </div>
         </body>
       </html>
     )
