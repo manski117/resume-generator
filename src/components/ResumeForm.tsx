@@ -114,6 +114,10 @@ export function ResumeForm() {
     console.log("Jobs:", jobs);
   }, [bio, schools, jobs, projects, skills]);
 
+  useEffect(() => {
+    loadData();
+  }, []);
+
   function logData() {
     //logs data and attempts to save it to local storage
     console.log(bio, schools, jobs, projects, skills);
