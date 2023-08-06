@@ -20,15 +20,6 @@ export default function Home() {
                   <button className="btn btn-primary">View Preview</button>
                 </Link>
             </div>
-            <h3>
-                DONE - re-made directory structure
-            </h3>
-            <h4>
-                CURRENTLY - make sure functions work
-            </h4>
-            <h5>
-                FINALLY - clean up code
-            </h5>
           </div>
         </div>
       </div>

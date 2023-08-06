@@ -2,26 +2,9 @@
 import React from "react";
 import { Job, School, Project } from "~/components/ResumeForm";
 import { useRef } from 'react';
+import Link from "next/link";
 
 export default function PrintResume(){
-
-  function logFromLocalStorage() {
-    const storedData = localStorage.getItem("resumeData");
-    if (storedData) {
-      try {
-        const parsedData = JSON.parse(storedData);
-        console.log("Data found in local storage:");
-        console.log(parsedData);
-      } catch (error) {
-        console.error("Error parsing data from local storage:", error);
-      }
-    } else {
-      console.log("No data found in local storage.");
-    }
-
-    // activate render fucntions here for now
-    renderBio();
-  }
 
   function renderBio() {
     const storedData = localStorage.getItem("resumeData");
@@ -231,9 +214,15 @@ export default function PrintResume(){
                   {typeof window !== 'undefined' && window.localStorage ? renderSkills() : null}
                 </div>
             </section>
-            <button onClick={printResume} className="btn w-full mt-10" >
-                Print Resume
-            </button>
+            <span className="flex flex-col md:flex-row mt-10 justify-center items-center gap-5">
+                <button onClick={printResume} className="btn h-16 w-[40%]" >
+                    Print Resume
+                </button>
+                <Link className="btn h-16 w-[40%]" href='/new' title="Go back to edit page">
+                    Wait, I need to make some changes
+                </Link>
+            </span>
+
         </div>
     )
 }

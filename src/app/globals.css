@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.footer-link{
+    color: hsl(var(--p));
+    text-decoration: none;
+}
+.footer-link:hover{
+    color: hsl(var(--pf));
+    text-decoration: underline;
+}
+.footer-link:visited{
+    color: hsl(var(--s));
+    text-decoration: none;
+}
+.footer-link:visited:hover{
+    color: hsl(var(--sf));
+    text-decoration: underline;
+}
+

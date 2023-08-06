@@ -107,12 +107,13 @@ export function ResumeForm() {
   const value = { bio, setBio, schools, setSchools, jobs, setJobs, projects, setProjects, skills, setSkills };
 
   useEffect(() => {
-    console.log("Schools:", schools);
-    console.log("Jobs:", jobs);
-    console.log("Projects:", projects);
-    console.log("Skills:", skills);
-    console.log("Bio:", bio);
-    console.log("Jobs:", jobs);
+    // runs whenever the state is updated or form inputs changed
+    // console.log("Schools:", schools);
+    // console.log("Jobs:", jobs);
+    // console.log("Projects:", projects);
+    // console.log("Skills:", skills);
+    // console.log("Bio:", bio);
+    // console.log("Jobs:", jobs);
   }, [bio, schools, jobs, projects, skills]);
 
   useEffect(() => {
@@ -121,7 +122,7 @@ export function ResumeForm() {
 
   function logData() {
     //logs data and attempts to save it to local storage
-    console.log(bio, schools, jobs, projects, skills);
+    // console.log(bio, schools, jobs, projects, skills);
     saveToLocalStorage(bio, schools, jobs, projects, skills);
   }
   
@@ -199,16 +200,15 @@ export function ResumeForm() {
       <JobForm />
       <ProjectForm />
       <SkillsForm />
-      {/* Other child components */}
-      <button className="btn mt-4 mx-auto" onClick={logData}>
-        Log and save
-      </button>
-      <button className="btn mt-4 mx-auto" onClick={loadData}>
-        Load from LS 
-      </button>
-      <Link href="/print" className="btn mt-4 mx-auto" onClick={logData}>
-        Save and View
-      </Link>
+  
+      <span className="flex flex-col md:flex-row mt-10 justify-center items-center gap-5">
+        <button className="btn w-[43%] mt-4 mx-auto" onClick={logData}>
+          Save
+        </button>
+        <Link href="/print" className="btn w-[43%] mt-4 mx-auto" onClick={logData}>
+          Save and View
+        </Link>
+      </span>
       
     </ResumeContext.Provider>
   );
@@ -364,7 +364,7 @@ export function SchoolForm() {
     setSchools(newSchools);
   };
   function logSchoolData() {
-    console.log(schools);
+    // console.log(schools);
   }
 
   return (
@@ -530,7 +530,7 @@ export function JobForm() {
   };
   
   function logJobData() {
-    console.log(jobs);
+    // console.log(jobs);
   }
 
   return (
@@ -661,7 +661,7 @@ export function ProjectForm() {
   };
   
   function logProjectData() {
-    console.log(projects);
+    // console.log(projects);
   }
 
   return (
