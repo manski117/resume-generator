@@ -7,6 +7,7 @@
 #### To Do:
 1 - **DONE** Deploy new project to Vercel successfully
 2 - **DONE** import stuff
-3 - cleanup directory structure
+3 - *in-progress* cleanup directory structure
+    (local build looks successful, attempting to deploy now)
 4 - add functions
 5 - cleanup code (console expecially!)
