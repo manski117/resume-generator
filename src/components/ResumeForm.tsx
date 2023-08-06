@@ -355,7 +355,7 @@ export function SchoolForm() {
     value: string
   ) => {
     const newSchools = [...schools];
-    newSchools[index][field] = value;
+    newSchools[index]![field] = value;
     setSchools(newSchools);
   };
   function logSchoolData() {
@@ -513,13 +513,13 @@ export function JobForm() {
     const newJobs = [...jobs];
     if (field === "duties") {
       if (Array.isArray(value)) {
-        newJobs[index][field] = value;
+        newJobs[index]![field] = value;
       } else {
         // If it's a single string, convert it into an array with one element
-        newJobs[index][field] = [value];
+        newJobs[index]![field] = [value];
       }
     } else {
-      newJobs[index][field] = value as string; // Leave other fields unchanged
+      newJobs[index]![field] = value as string; // Leave other fields unchanged
     }
     setJobs(newJobs);
   };
@@ -644,13 +644,13 @@ export function ProjectForm() {
     const newProjects = [...projects];
     if (field === "details") {
       if (Array.isArray(value)) {
-        newProjects[index][field] = value;
+        newProjects[index]![field] = value;
       } else {
         // If it's a single string, convert it into an array with one element
-        newProjects[index][field] = [value];
+        newProjects[index]![field] = [value];
       }
     } else {
-      newProjects[index][field] = value as string; // Leave other fields unchanged
+      newProjects[index]![field] = value as string; // Leave other fields unchanged
     }
     setProjects(newProjects);
   };
