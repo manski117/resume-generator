@@ -1,6 +1,6 @@
 # Easy Resume Generator by manski117
 
-## Free to use. Generate a simple resume fast and easy.
+### Free to use. Generate a simple resume fast and easy.
 
 ### Created via create T3 app using nextjs, typescript, react, tailwind, and daisyUI.
 
