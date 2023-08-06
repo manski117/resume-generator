@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Job, School, Project } from "~/components/ResumeForm";
+import { useRef } from 'react';
 
 export default function PrintResume(){
 
@@ -202,24 +203,38 @@ export default function PrintResume(){
       return null; // Return null to render nothing when no data is available
     }
   }
-  
+  function printResume() {
+    var header_str = '<html><head><title>' + document.title  + '</title></head><body>';
+    var footer_str = '</body></html>';
+    //@ts-ignore
+    var new_str = document.getElementById('built-resume-page').innerHTML;
+    var old_str = document.body.innerHTML;
+    document.body.innerHTML = header_str + new_str + footer_str;
+    window.print();
+    document.body.innerHTML = old_str;
+    return false;
+  }
 
     return (
-        <main className="w-[90vw] lg:w-full overflow-hidden overflow-scroll" >
-            <div className="w-[860px] h-fit min-h-[1060px] bg-white text-gray-800 font-serif pt-16 px-16 pb-16">
-      {/* Conditionally call renderBio() if localStorage is available */}
-      {typeof window !== 'undefined' && window.localStorage ? renderBio() : null}
-      {/* Conditionally call renderBio() if localStorage is available */}
-      {typeof window !== 'undefined' && window.localStorage ? renderJobs() : null}
-      {/* Conditionally call renderBio() if localStorage is available */}
-      {typeof window !== 'undefined' && window.localStorage ? renderProjects() : null}
-      {/* Conditionally call renderBio() if localStorage is available */}
-      {typeof window !== 'undefined' && window.localStorage ? renderSchools() : null}
-      {/* Conditionally call renderBio() if localStorage is available */}
-      {typeof window !== 'undefined' && window.localStorage ? renderSkills() : null}
-            </div>
-            
-        </main>
+        <div className="w-full">
+            <section id="built-resume-page" className="w-[90vw] lg:w-full overflow-hidden overflow-scroll" >
+                <div className="w-[860px] h-fit min-h-[1060px] bg-white text-gray-800 font-serif pt-16 px-16 pb-16">
+                  {/* Conditionally call renderBio() if localStorage is available */}
+                  {typeof window !== 'undefined' && window.localStorage ? renderBio() : null}
+                  {/* Conditionally call renderBio() if localStorage is available */}
+                  {typeof window !== 'undefined' && window.localStorage ? renderJobs() : null}
+                  {/* Conditionally call renderBio() if localStorage is available */}
+                  {typeof window !== 'undefined' && window.localStorage ? renderProjects() : null}
+                  {/* Conditionally call renderBio() if localStorage is available */}
+                  {typeof window !== 'undefined' && window.localStorage ? renderSchools() : null}
+                  {/* Conditionally call renderBio() if localStorage is available */}
+                  {typeof window !== 'undefined' && window.localStorage ? renderSkills() : null}
+                </div>
+            </section>
+            <button onClick={printResume} className="btn w-full mt-10" >
+                Print Resume
+            </button>
+        </div>
     )
 }
 

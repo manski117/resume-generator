@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, createContext, useContext, useEffect } from "react";
 import { BulletListFormTextarea } from "./BulletTextArea";
+import Link from "next/link";
 
 type Bio = {
   name: string;
@@ -205,9 +206,9 @@ export function ResumeForm() {
       <button className="btn mt-4 mx-auto" onClick={loadData}>
         Load from LS 
       </button>
-      <button className="btn mt-4 mx-auto" onClick={logFromLocalStorage}>
-        LOG from LS 
-      </button>
+      <Link href="/print" className="btn mt-4 mx-auto" onClick={logData}>
+        Save and View
+      </Link>
       
     </ResumeContext.Provider>
   );
