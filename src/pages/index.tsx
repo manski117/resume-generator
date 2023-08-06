@@ -16,14 +16,17 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8 text-white">
             <h2>
-              step 2 - most stuff has been imported...
+              step 2 - import stuff DONE. Imported dependencies and the app deploys fine.
             </h2>
             <h3>
-              step 3 - add functions
+              step 3 - modify directory structure (current task)
             </h3>
             <h4>
-              step 4 - cleanup code (console expecially!)
+              step 4 - add functions
             </h4>
+            <h5>
+              step 5 - clean up code
+            </h5>
             
           </div>
         </div>

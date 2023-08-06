@@ -5,8 +5,8 @@
 ### Created via create T3 app using nextjs, typescript, react, tailwind, and daisyUI.
 
 #### To Do:
-1 - Deploy new project to Vercel successfully
-2 - import stuff
+1 - **DONE** Deploy new project to Vercel successfully
+2 - **DONE** import stuff
 3 - cleanup directory structure
 4 - add functions
 5 - cleanup code (console expecially!)
