@@ -18,7 +18,7 @@ export default function RootLayout({
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </head>
         <body>
-        <div className="flex items-center justify-between flex-col pt-8 px-8 space-y-10 min-h-screen">
+        <div className="flex items-center justify-between flex-col space-y-10 min-h-screen">
           <Navbar />
           <main>{children}</main>
           <footer className="footer footer-center p-4 bg-base-200 w-[100vw] h-24 md:h-fit text-base-content">

@@ -5,11 +5,11 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero h-30 bg-base-100">
         <div className="hero-content flex-col lg:flex-row">
           <div className="flex flex-col justify-center items-center" >
             <h1 className="text-5xl text-center font-bold">Free Resume Generator</h1>
-            <p className="py-6">
+            <p className="py-6 text-lg">
               Make a new resume fast, easy and free
             </p>
             <div className="w-full flex flex-row items-center justify-center gap-6 md:gap-10">
