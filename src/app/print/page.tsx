@@ -207,14 +207,16 @@ export default function PrintResume(){
     return (
         <main className="w-[90vw] lg:w-full overflow-hidden overflow-scroll" >
             <div className="w-[860px] h-fit min-h-[1060px] bg-white text-gray-800 font-serif pt-16 px-16 pb-16">
-                {renderBio()}
-                {renderJobs()}
-                {renderProjects()}
-                {renderSchools()}
-                {renderSkills()}
-
-                
-            
+      {/* Conditionally call renderBio() if localStorage is available */}
+      {typeof window !== 'undefined' && window.localStorage ? renderBio() : null}
+      {/* Conditionally call renderBio() if localStorage is available */}
+      {typeof window !== 'undefined' && window.localStorage ? renderJobs() : null}
+      {/* Conditionally call renderBio() if localStorage is available */}
+      {typeof window !== 'undefined' && window.localStorage ? renderProjects() : null}
+      {/* Conditionally call renderBio() if localStorage is available */}
+      {typeof window !== 'undefined' && window.localStorage ? renderSchools() : null}
+      {/* Conditionally call renderBio() if localStorage is available */}
+      {typeof window !== 'undefined' && window.localStorage ? renderSkills() : null}
             </div>
             
         </main>
